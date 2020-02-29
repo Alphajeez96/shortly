@@ -3,8 +3,9 @@
     <div class="short">
         <div class="flex-container">
             <div class="t">
-                <input type="text" placeholder="    shorten a link here...">
-            <button class="shortbtn">shorten it!</button>
+                <input v-model='url' type="text" placeholder="    shorten a link here...">
+            <button v-on:click='shortenlink' class="shortbtn">shorten it!</button>
+            <p>{{shortenedurl}}</p>
             </div>
             
         </div>
@@ -80,23 +81,44 @@
 <script>
 // @ is an alias to /src
 
-
+const axios = require('axios');
 export default {
   name: 'home',
   data(){
       return {
-         team: [
-             { name: 'Managi Iwuoha', role: 'Content Developer', avatar:'/avatar-1.png'},
-             { name: 'Fiyin Adewunmi', role: 'Human Resource Manager', avatar:'/avatar-2.png'},
-             { name: 'Patrick Inyang', role: 'Hub Manager', avatar:'/avatar-3.png'},
-             { name: "God's Time",     role: 'Back-end Developer', avatar:'/avatar-4.png'},
-             { name: 'John Doe',       role: 'Undefined', avatar:'./avatar-5.png'}
-         ] , 
+        url: '',
+        shortenedurl:  null
+      }
+    
+  },
+
+  computed: {
+      
+  },
+  
+  methods: {
+      
+      shortenlink: function() {
+       axios.post(`https://rel.ink/api/links/`, {
+        url: this.url,
+       if (url = ''){
+           alert('Input a valid link')
+       }
+  })
+  .then(response => {
+    console.log(response.data);
+    this.shortenedurl = 'https://rel.ink/' + response.data.hashid;
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
       }
   }
   
 }
 </script>
+
 <style scoped>
 .fully{
     margin: 60px 0px 60px 0px;
@@ -113,8 +135,6 @@ hr {
     border: 10px hsl(180, 66%, 49%);
     height: 6px;
     width: 10px;    
-    /* Set the hr color */
-    /* color: green;  */
     background: hsl(180, 66%, 49%);
     /* position: relative; */
     /* float:left; */
@@ -147,13 +167,6 @@ justify-content: left;
 font-size:12px
 }
  
-/* div p{
-    font-size: 14px;
-    text-align:left;
-    padding-left:50px;
-    padding-top:20px;
-    line-height: 26px;
-} */
 .vector{
     margin-left:50px;
     /* justify-content:left; */
