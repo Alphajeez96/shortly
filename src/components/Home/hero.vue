@@ -116,16 +116,7 @@ img {
   text-align: left;
   font-size: 50px;
 }
-@media screen and (max-width: 992px) {
-   img{
-     display:none;
-   }
-   .login-btn{
-     width:25vw;
-     /* height:12vh; */
-   }
-     
-}
+
 @media screen and (max-width: 700px) {
    img{
      display:none;
@@ -154,16 +145,8 @@ img {
     right: 30px;
 
    }
-      /* .login-btn{
-     width:4vw;
-     color: #ff0000;
-   } */
+    
 }
 
-@media screen and (max-width: 768px) {
-    /* .login-btn{
-     width:4vw;
-       color: #ff0000;
-   }  */
-}
+
 </style>

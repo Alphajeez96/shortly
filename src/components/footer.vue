@@ -63,7 +63,7 @@ li {
 }
 .foot {
   background-color: hsl(260, 8%, 14%);
-  width: 100%px;
+  /* width: 100%; */
   min-height: 30vh;
   color: #ffffff;
   padding: 80px;
@@ -86,7 +86,7 @@ li {
   }
   .foothead {
     margin-top: 10px;
-    /* color: red !important; */
+
   }
   .footimg {
     width: 4vw;

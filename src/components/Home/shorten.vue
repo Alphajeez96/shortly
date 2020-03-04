@@ -149,7 +149,7 @@ export default {
   background-color: rgba(43, 165, 137, 0.45);
 }
 .copy {
-  margin-left: 400px;
+  margin-left: 400px; 
   position: relative;
   bottom: 10px;
 }
@@ -240,7 +240,7 @@ hr {
   justify-content: center;
 }
 .box {
-  min-width: 24vw;
+  min-width: 20vw;
   max-height: 30vh;
   border: 1px solid #e5e5e5;
   box-shadow: 0px 12px 75px rgba(67, 73, 106, 0.09);
