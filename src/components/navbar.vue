@@ -76,18 +76,18 @@
 }
 
 .nav-item .nav-link{
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: Gray hsl(0, 0%, 75%) !important;
 }
 
 .login-btn{
-    font-size: 12px;
+    font-size: 16px;
     width: 6vw;
     border-radius: 20px;
 }
 .signup-btn{
-    font-size: 12px;
+    font-size: 16px;
     width: 6vw;
     border-style: none;
     background: white !important; 
