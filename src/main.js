@@ -5,9 +5,13 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
- 
-Vue.use(VueAxios, axios)
+import VueClipboard from 'vue-clipboard2'
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
+Vue.use(VueSweetalert2);
+Vue.use(VueClipboard)
+Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
 new Vue({

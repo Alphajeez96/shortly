@@ -11,17 +11,17 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse nav-utilities" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse nav-utilitiess nav-utilities" id="navbarSupportedContent">
         <ul class="navbar-nav col-12">
             <li class="nav-item mx-1">
                
-                <a class="nav-link" href="#" >Features</a>
+                <a class="nav-link features" href="#" >Features</a>
                 
             </li>
            
             <li class="nav-item mx-1">
                
-                <a class="nav-link" href="#" >Pricing</a>
+                <a class="nav-link p" href="#" >Pricing</a>
                 
             </li>
             <li class="nav-item mx-1">
@@ -92,15 +92,30 @@
     border-style: none;
     background: white !important; 
 }
-@media screen and (max-width: 992px) {
-    .login-btn,  .signup-btn{
-        width: 15vw;
-    }
-}
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 700px) {
     .login-btn , .signup-btn{
-        width: 100px;
-        /* margin-left: 2rem !important; */
+        width: 20vw;
+    }
+    .features{
+        position: relative;
+        right: 5px;
+
+    }
+    .p{
+        margin-right:17px;
+    }
+    .nav-utilitiess{
+        margin-right: 400px !important;
+        position: relative;
+        right: 55px;
+    }
+    .test{
+             display: flex;  
+             flex-direction: row;
+             position: relative;
+             left: 15px;
     }
     .app-logo img {
         width: 20vw;
