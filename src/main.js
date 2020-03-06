@@ -8,6 +8,8 @@ import VueAxios from 'vue-axios'
 import VueClipboard from 'vue-clipboard2'
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import swal from 'sweetalert';
+
 
 Vue.use(VueSweetalert2);
 Vue.use(VueClipboard)

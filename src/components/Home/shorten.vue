@@ -4,7 +4,16 @@
       <div class="flex-container">
         <div class="t">
           <input v-model="url" type="text" placeholder="    shorten a link here..." />
-          <button v-on:click="shortenlink" class="shortbtn">shorten it!</button>
+          <button @submit="shortenlink" v-on:click="shortenlink" class="shortbtn">shorten it!</button>
+
+
+          <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors" :key="error.id">{{ error }}</li>
+    </ul>
+  </p>
+
 
           <div v-bind:class="{ active: isActive }" class="shorts card w-100">
             <div class="ml-2 card-textd flex-container">
@@ -82,12 +91,14 @@
 </template>
 <script>
 // @ is an alias to /src
+var swal =  ''
 
 const axios = require("axios");
 export default {
   name: "home",
   data() {
     return {
+      errors: [],
       isActive: true,
       url: "",
       shortenedurl: null,
@@ -98,15 +109,27 @@ export default {
   computed: {},
 
   methods: {
-    shortenlink: function() {
+    shortenlink: function(e) {
       this.isActive = false;
-      axios
-        .post(`https://rel.ink/api/links/`, {
+        e.preventDefault();
+          this.errors = [];
+        if (this.url === ''){
+          // this.errors.push('url is needed')
+         Swal({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Something went wrong!',
+  footer: '<a href>Why do I have this issue?</a>'
+})
+        } else{
+      
+      axios.post(`https://rel.ink/api/links/`, {
           url: this.url,
 
           if(url = this.url) {
             alert("Input a valid link");
           }
+          
         })
 
         .then(response => {
@@ -114,8 +137,9 @@ export default {
           this.shortenedurl = "https://rel.ink/" + response.data.hashid;
         })
         .catch(function(error) {
-          $swal(error);
+          alert(error);
         });
+        }
     },
 
     onCopy: function(e) {
