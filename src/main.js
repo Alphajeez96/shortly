@@ -10,7 +10,7 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import swal from 'sweetalert';
 
-
+Vue.prototype.$swal  = swal;
 Vue.use(VueSweetalert2);
 Vue.use(VueClipboard)
 Vue.use(VueAxios, axios)

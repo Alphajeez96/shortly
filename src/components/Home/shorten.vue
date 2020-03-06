@@ -91,7 +91,6 @@
 </template>
 <script>
 // @ is an alias to /src
-var swal =  ''
 
 const axios = require("axios");
 export default {
@@ -114,14 +113,11 @@ export default {
         e.preventDefault();
           this.errors = [];
         if (this.url === ''){
-          // this.errors.push('url is needed')
-         Swal({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Something went wrong!',
-  footer: '<a href>Why do I have this issue?</a>'
-})
+          this.isActive = true;
+         this.$swal('Error', "Input cannot be empty", "error")
+ 
         } else{
+          this.isActive
       
       axios.post(`https://rel.ink/api/links/`, {
           url: this.url,
@@ -136,10 +132,19 @@ export default {
           console.log(response.data);
           this.shortenedurl = "https://rel.ink/" + response.data.hashid;
         })
+        
         .catch(function(error) {
-          alert(error);
+
+          if (error) {
+            // this.isActive = false
+            swal('Oops...', "Check your Network Connection", "info")
+            
+            
+          }
+          
         });
         }
+      //  this.isActive = true; 
     },
 
     onCopy: function(e) {
@@ -174,9 +179,9 @@ export default {
   background-color: rgba(43, 165, 137, 0.45);
 }
 .copy {
-  margin-left: 400px; 
+  margin-left: 650px; 
   position: relative;
-  bottom: 10px;
+  bottom: 5px;
 }
 
 .card {
