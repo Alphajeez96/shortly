@@ -35,14 +35,14 @@
     <div class="stats">
       <div class="advm">
         <h3 class="mt-5 adv">Advanced Statistics</h3>
-        <p class="pb-5">
+        <p class="pb-5" style="font-size: 18px;">
           Track how your links are performing across the web with
           <br />our advanced statistics board.
         </p>
       </div>
 
-      <div class="flex-containe mt-5">
-        <div class="box brand mx- my-">
+      <div class="flex-containe  mt-5" >
+        <div class="box brand " >
           <div class="vector">
             <img src="../../../public/icon-brand-recognition.svg" class="vetor pt-2" alt />
           </div>
@@ -145,10 +145,11 @@ export default {
     onCopy: function(e) {
       this.message = this.shortenedurl;
     },
+    
     onError: function(e) {
       alert("Failed to copy texts");
     },
-
+    
     showAlert() {
       this.$swal({
         position: "center",
@@ -201,7 +202,8 @@ hr {
   padding-left: 10px;
 }
 .ptext {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 200;
   text-align: left;
   padding-left: 20px;
   padding-top: 5px;
@@ -239,7 +241,7 @@ hr {
 .boxheader {
   font: bolder;
   font-weight: 1000;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   padding-left: 20px;
   padding-top: 15px;
@@ -320,6 +322,7 @@ hr {
 
 .shortbtn {
   background: hsl(180, 66%, 49%);
+  font-size: 18px;
 }
 .flex-container {
   display: flex;
@@ -342,7 +345,7 @@ input {
   border-radius: 7px;
   color: white;
 }
-/* @media screen and (max-width: 1030px) {
+@media screen and (max-width: 1030px) {
   input {
     margin: -30px 0px 0px 0px !important;
     position: relative;
@@ -353,7 +356,7 @@ input {
     bottom: 10px;
     width: 17vw;
   }
-} */
+}
 
 @media screen and (max-width: 700px) {
   .copy {

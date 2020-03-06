@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 row foot container-fluid mx-0">
+  <div class="col-12 row foot container-fluid mx-0" >
     <div class="col-md-1 mx-auto">
       <h3 class="shortly">Shortly</h3>
     </div>
@@ -72,6 +72,7 @@ li {
   font-weight: bolder;
   color: #fff;
   cursor: pointer;
+  /* margin-right: 2000px; */
 }
 .foothead {
   text-align: left;

@@ -6,7 +6,7 @@
         <br />shorter links
       </h2>
 
-      <p>
+      <p class="herop">
         Build Your brand's recognition and get detailed
         <br />insights on how links are performing
       </p>
@@ -19,6 +19,9 @@
 </template>
 
 <style scoped>
+.herop{
+  font-size: 16px
+}
 img {
   width: 50vw;
   height: 60vh;
@@ -107,7 +110,7 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   text-align: left;
-  margin-left: 80px;
+  margin-left: 120px;
   margin-top: 70px;
 }
 .heroh2 {
