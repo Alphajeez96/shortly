@@ -142,7 +142,6 @@ export default {
         });
         }
     },
-
     onCopy: function(e) {
       this.message = this.shortenedurl;
     },
