@@ -109,7 +109,6 @@ export default {
 
   methods: {
     shortenlink: function(e) {
-      this.isActive = false;
         e.preventDefault();
           this.errors = [];
         if (this.url === ''){
@@ -117,8 +116,8 @@ export default {
          this.$swal('Error', "Input cannot be empty", "error")
  
         } else{
-          this.isActive
-      
+          // this.isActive
+      this.isActive = false;
       axios.post(`https://rel.ink/api/links/`, {
           url: this.url,
 
@@ -136,15 +135,12 @@ export default {
         .catch(function(error) {
 
           if (error) {
-            // this.isActive = false
-            swal('Oops...', "Check your Network Connection", "info")
-            
-            
+         
+            swal('Oops...', "Check your Network Connection", "info",)  
           }
           
         });
         }
-      //  this.isActive = true; 
     },
 
     onCopy: function(e) {
