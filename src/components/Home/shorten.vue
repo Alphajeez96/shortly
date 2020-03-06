@@ -202,7 +202,7 @@ hr {
   padding-left: 10px;
 }
 .ptext {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
   text-align: left;
   padding-left: 20px;
@@ -322,7 +322,7 @@ hr {
 
 .shortbtn {
   background: hsl(180, 66%, 49%);
-  font-size: 18px;
+  font-size: 16px;
 }
 .flex-container {
   display: flex;
